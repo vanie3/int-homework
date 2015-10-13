@@ -52,19 +52,6 @@ class ApplicationController extends Controller
         session()->flash('flash_message_success', 'You have successfully created a new software application!');
         return redirect()->route('applications.index');
     }
-//
-//    /**
-//     * Display the specified resource.
-//     *
-//     * @param  int  $id
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function show($id)
-//    {
-////        $application = Application::findOrFail($id);
-////
-////        return redirect('application.create')->with($application);
-//    }
 
     /**
      * Show the form for editing the specified resource.
@@ -97,14 +84,6 @@ class ApplicationController extends Controller
 
         session()->flash('flash_message_success', 'You have successfully updates a software application!');
         return redirect()->route('applications.index');
-
-
-//        Application::find($id);
-//        $data = $request->all();
-//        Application::update($data);
-//
-////        return view('application.index');
-//        return Redirect::action('ApplicationController@index');
     }
 
     /**
