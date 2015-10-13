@@ -44,6 +44,7 @@ class AuthorController extends Controller
         $data = $request->all();
         Author::create($data);
 
+        session()->flash('flash_message_success', 'You have successfully created a new author!');
         return redirect()->back();
     }
 

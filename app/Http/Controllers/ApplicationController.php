@@ -94,6 +94,8 @@ class ApplicationController extends Controller
 
         $application = Application::findOrFail($id);
         $application->update($request->except(['_method', '_token']));
+
+        session()->flash('flash_message_success', 'You have successfully updates a software application!');
         return redirect()->route('applications.index');
 
 
