@@ -21,6 +21,10 @@
                 font-family: 'Lato';
             }
 
+            .title {
+                font-size: 96px;
+            }
+
         </style>
     </head>
     <body>
