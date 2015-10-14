@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Application;
 use App\Author;
-use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\ApplicationFormRequest;
 
 class ApplicationController extends Controller
@@ -50,7 +47,7 @@ class ApplicationController extends Controller
         Application::create($data);
 
         session()->flash('flash_message_success', 'You have successfully created a new software application!');
-        return redirect()->route('applications.index');
+        return redirect()->action('ApplicationController@index');
     }
 
     /**
@@ -84,16 +81,5 @@ class ApplicationController extends Controller
 
         session()->flash('flash_message_success', 'You have successfully updates a software application!');
         return redirect()->route('applications.index');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
