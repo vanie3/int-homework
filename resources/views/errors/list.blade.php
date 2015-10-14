@@ -3,9 +3,6 @@
         <i class="fa fa-bolt"></i>
         <span class="sr-only">Error:</span>
         {{ $error }}
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-            &times
-        </button>
     </div>
 @endforeach
 @if(Session::has('flash_message_success'))
