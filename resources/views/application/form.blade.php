@@ -15,7 +15,7 @@
 </div>
 
 <div class="form-group">
-    {!!  Form::label('author_id', 'Select Author Company:') !!}
+    {!!  Form::label('author_id', 'Select A Company (Author):') !!}
 
     <select class="form-control" name="author_id">
         <option value="" disabled selected>- -</option>
