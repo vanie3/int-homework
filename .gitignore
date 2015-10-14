@@ -6,3 +6,4 @@ Homestead.json
 .env.example
 .idea
 .DS_Store
+*/.htaccess

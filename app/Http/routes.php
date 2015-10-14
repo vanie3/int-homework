@@ -11,18 +11,7 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-//Route::get('/applications', 'ApplicationController@index');
-//Route::post('/applications', 'ApplicationController@store');
-//Route::post('/application/create', 'ApplicationController@create');
-//Route::delete('/application/{application}', 'ApplicationController@destroy');
-//Route::get('/application/{application}', 'ApplicationController@show');
-//Route::put('/application/{application}', 'ApplicationController@update');
-//Route::get('/application/{application}/edit', 'ApplicationController@edit');
-
-Route::resource('/applications', 'ApplicationController');
+Route::get('/', 'ApplicationController@index');
+Route::resource('/applications', 'ApplicationController', ['except' => 'index']);
 
 Route::resource('/authors', 'AuthorController');
