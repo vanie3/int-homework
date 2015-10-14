@@ -16,7 +16,7 @@
         <h1>
             <a href="/applications/{{ $application->id }}/edit">{{ $application->title }}</a>
         </h1>
-        <p>Version: {{ $application->version }}</p>
+        <p>Version: {{ number_format($application->version, 1) }}</p>
         <p>Author Id: {{ $application->author_id }}</p>
     @endforeach
 

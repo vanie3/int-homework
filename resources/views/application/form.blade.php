@@ -8,7 +8,7 @@
     <select class="form-control" name="version">
         @foreach($versions as $version)
             <option value="{{$version}}" @if(isset($application) && $application->version == $version) selected="" @endif>
-                {{$version}}
+                {{ number_format($version, 1) }}
             </option>
         @endforeach
     </select>
