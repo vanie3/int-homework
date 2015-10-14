@@ -20,7 +20,7 @@ class AuthorController extends Controller
         $applications = Application::all();
         $authors = Author::all();
 
-        return view('application.create')->withApplications($applications)->withAuthors($authors);
+        return view('application.create', compact('applications', 'authors'));
     }
 
     /**
@@ -49,6 +49,6 @@ class AuthorController extends Controller
         $application = Application::find($id);
         $author = Author::where('id', '=', $application->author_id);
 
-        return view('application.edit')->withApplication($application)->withAuthor($author);
+        return view('application.edit', compact('application', 'author'));
     }
 }

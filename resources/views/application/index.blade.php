@@ -1,6 +1,7 @@
 @extends('welcome')
 
 @section('content')
+
     @include('errors.list')
 
     <div class="content">
@@ -18,4 +19,5 @@
         <p>Version: {{ $application->version }}</p>
         <p>Author Id: {{ $application->author_id }}</p>
     @endforeach
+
 @endsection
